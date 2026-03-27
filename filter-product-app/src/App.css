@@ -1,0 +1,135 @@
+.app-container {
+  min-height: 100vh;
+  padding: 36px 16px 56px;
+}
+
+.product-section {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.product-section h1 {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 700;
+  color: #1f232b;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-button,
+.toolbar-control {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: 1px solid #d8ddd8;
+  background: #ffffff;
+  color: #2b2f34;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.category-button {
+  min-width: 92px;
+  cursor: pointer;
+}
+
+.category-button.active {
+  border: 2px solid #2b2f34;
+}
+
+.toolbar-control {
+  min-width: 150px;
+  outline: none;
+}
+
+.toolbar input.toolbar-control {
+  width: 170px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+  gap: 18px;
+  justify-content: center;
+}
+
+.product-card {
+  background: #f4f6f5;
+  border: 1px solid #d7ddd7;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(43, 47, 52, 0.15);
+  padding: 18px 14px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 98px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.product-card h2 {
+  margin: 12px 0 6px;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #101418;
+}
+
+.product-card p {
+  margin: 0;
+  font-size: 1.03rem;
+  color: #1f232b;
+}
+
+.empty-message {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #273128;
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 210px));
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+
+  .toolbar {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-button,
+  .toolbar-control {
+    min-width: 100%;
+  }
+
+  .toolbar input.toolbar-control {
+    width: 100%;
+  }
+}

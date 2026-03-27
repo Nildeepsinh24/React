@@ -1,0 +1,20 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.app{
+  width: 50%;
+  margin: auto;
+  height: auto;
+
+}
+
+.icon-Size{
+  animation: 0.9s ease infinite fadeIn;
+  font-size: 22px;
+  color: blue;
+  font-weight: 800;
+}
