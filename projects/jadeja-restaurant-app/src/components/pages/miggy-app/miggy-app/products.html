@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Swiggy Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <button class="btn border-0 me-2 d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarOffcanvas">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-box d-flex align-items-center">
+                    <span class="bg-swiggy-orange text-white rounded-3 px-2 py-1 fw-bold fs-4 me-1"
+                        style="background-color: var(--swiggy-orange);">M</span>
+                    <span class="fw-bold fs-4 text-dark">Miggy</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="collapse navbar-collapse d-none d-lg-block mx-4">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold text-uppercase small">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center ms-auto">
+                <a href="cart.html" class="nav-link position-relative mx-2">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">0</span>
+                </a>
+                <a href="#" class="btn btn-swiggy d-none d-md-block ms-2">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas">
+        <div class="offcanvas-header border-bottom shadow-sm">
+            <div class="d-flex align-items-center">
+                <span class="bg-swiggy-orange text-white rounded-3 px-2 py-1 fw-bold me-2"
+                    style="background-color: var(--swiggy-orange);">M</span>
+                <h5 class="offcanvas-title fw-bold">Miggy App</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="list-group list-group-flush sidebar">
+                <a href="index.html" class="list-group-item list-group-item-action border-0">
+                    <i class="fas fa-home me-3"></i> Home
+                </a>
+                <a href="products.html" class="list-group-item list-group-item-action active border-0">
+                    <i class="fas fa-utensils me-3"></i> Products
+                </a>
+                <a href="gallery.html" class="list-group-item list-group-item-action border-0">
+                    <i class="fas fa-images me-3"></i> Gallery
+                </a>
+                <a href="cart.html" class="list-group-item list-group-item-action border-0">
+                    <i class="fas fa-shopping-cart me-3"></i> Cart
+                </a>
+                <hr>
+                <a href="feedback.html" class="list-group-item list-group-item-action border-0">
+                    <i class="fas fa-comment-alt me-3"></i> Feedback
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main class="py-5 bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <!-- Filters Sidebar (Desktop) -->
+                <aside class="col-lg-3 d-none d-lg-block">
+                    <div class="card border-0 shadow-sm p-4 rounded-4 sticky-top" style="top: 100px;">
+                        <h5 class="fw-bold mb-4">Filters</h5>
+
+                        <div class="mb-4">
+                            <h6 class="fw-semibold">Cuisines</h6>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="c1">
+                                <label class="form-check-label" for="c1">Italian</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="c2">
+                                <label class="form-check-label" for="c2">American</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="c3">
+                                <label class="form-check-label" for="c3">Indian</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="c4">
+                                <label class="form-check-label" for="c4">Chinese</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-semibold">Price Range</h6>
+                            <input type="range" class="form-range" min="0" max="100" id="priceRange">
+                            <div class="d-flex justify-content-between mt-2">
+                                <span>$0</span>
+                                <span>$100</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-semibold">Rating</h6>
+                            <select class="form-select">
+                                <option selected>Any Rating</option>
+                                <option value="4">4+ Stars</option>
+                                <option value="3">3+ Stars</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-swiggy w-100">Apply Filters</button>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold">Showing all delicacies</h4>
+                        <div class="dropdown">
+                            <button class="btn btn-white border shadow-sm dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown">
+                                Sort by: Relevance
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+                                <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+                                <li><a class="dropdown-item" href="#">Rating</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Product 1 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card food-card">
+                                <a href="product-details.html">
+                                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=400&h=300"
+                                        class="card-img-top" alt="Pizza Pan">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Margherita Pizza</h5>
+                                    <p class="card-text">Italian, Cheese, Basil</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="rating-badge"><i class="fas fa-star"></i> 4.3</span>
+                                        <span class="fw-bold">$14.99</span>
+                                    </div>
+                                    <button class="btn btn-outline-swiggy w-100 mt-3 add-to-cart-btn"
+                                        data-product="Margherita Pizza">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card food-card">
+                                <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=400&h=300"
+                                    class="card-img-top" alt="Classic Burger">
+                                <div class="card-body">
+                                    <h5 class="card-title">Double Cheese Burger</h5>
+                                    <p class="card-text">American, Meat, Fast Food</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="rating-badge"><i class="fas fa-star"></i> 4.6</span>
+                                        <span class="fw-bold">$9.99</span>
+                                    </div>
+                                    <button class="btn btn-outline-swiggy w-100 mt-3 add-to-cart-btn"
+                                        data-product="Double Cheese Burger">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card food-card">
+                                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=400&h=300"
+                                    class="card-img-top" alt="Tacos">
+                                <div class="card-body">
+                                    <h5 class="card-title">Spicy Paneer Tacos</h5>
+                                    <p class="card-text">Mexican, Paneer, Spicy</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="rating-badge"><i class="fas fa-star"></i> 4.1</span>
+                                        <span class="fw-bold">$7.50</span>
+                                    </div>
+                                    <button class="btn btn-outline-swiggy w-100 mt-3 add-to-cart-btn"
+                                        data-product="Paneer Tacos">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More Products (Duplicates for Demo) -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card food-card">
+                                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&h=300"
+                                    class="card-img-top" alt="Healthy Bowl">
+                                <div class="card-body">
+                                    <h5 class="card-title">Avocado Salad Bowl</h5>
+                                    <p class="card-text">Healthy, Vegan</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="rating-badge"><i class="fas fa-star"></i> 4.8</span>
+                                        <span class="fw-bold">$11.20</span>
+                                    </div>
+                                    <button class="btn btn-outline-swiggy w-100 mt-3 add-to-cart-btn"
+                                        data-product="Avocado Salad">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card food-card">
+                                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=400&h=300"
+                                    class="card-img-top" alt="Red Velvet">
+                                <div class="card-body">
+                                    <h5 class="card-title">Red Velvet Cake</h5>
+                                    <p class="card-text">Desserts, Cakes</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="rating-badge"><i class="fas fa-star"></i> 4.9</span>
+                                        <span class="fw-bold">$5.50</span>
+                                    </div>
+                                    <button class="btn btn-outline-swiggy w-100 mt-3 add-to-cart-btn"
+                                        data-product="Red Velvet Cake">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card food-card">
+                                <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=400&h=300"
+                                    class="card-img-top" alt="Noodles">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hakka Noodles</h5>
+                                    <p class="card-text">Chinese, Veggies</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="rating-badge"><i class="fas fa-star"></i> 4.4</span>
+                                        <span class="fw-bold">$8.99</span>
+                                    </div>
+                                    <button class="btn btn-outline-swiggy w-100 mt-3 add-to-cart-btn"
+                                        data-product="Hakka Noodles">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index) -->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold mb-3">COMPANY</h5>
+                    <a href="#">About us</a>
+                    <a href="#">Team</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold mb-3">CONTACT</h5>
+                    <a href="#">Help & Support</a>
+                    <a href="#">Partner with us</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold mb-3">LEGAL</h5>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund & Cancellation</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="social-icons">
+                        <h5 class="fw-bold mb-3">KEEP IN TOUCH</h5>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-secondary mt-5">
+            <div class="text-center pt-3 text-secondary">
+                <small>&copy;2026 Miggy App . Developed by Brijesh</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="https://wa.me/9998003879" class="float-btn float-whatsapp" target="_blank" title="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:9998003879" class="float-btn float-call" title="Call Us">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- Scroll Top Button -->
+    <button id="scrollTopBtn" class="btn btn-swiggy rounded-circle shadow">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
