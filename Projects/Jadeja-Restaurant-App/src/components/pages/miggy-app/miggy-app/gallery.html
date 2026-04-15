@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Swiggy Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 24px;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+            <button class="btn border-0 me-2 d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarOffcanvas">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-box d-flex align-items-center">
+                    <span class="bg-swiggy-orange text-white rounded-3 px-2 py-1 fw-bold fs-4 me-1"
+                        style="background-color: var(--swiggy-orange);">M</span>
+                    <span class="fw-bold fs-4 text-dark">Miggy</span>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse d-none d-lg-block mx-4">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold text-uppercase small">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="ms-auto d-flex align-items-center">
+                <a href="cart.html" class="nav-link position-relative mx-2">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-2">Visual Feast</h1>
+            <p class="text-muted mb-5">A glance at our deliciously prepared meals.</p>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item shadow-sm" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        onclick="showImg('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800')">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600"
+                            alt="Food 1">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item shadow-sm" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        onclick="showImg('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800')">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600"
+                            alt="Food 2">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item shadow-sm" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        onclick="showImg('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600')">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600"
+                            alt="Food 3">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item shadow-sm" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        onclick="showImg('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600')">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600"
+                            alt="Food 4">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item shadow-sm" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        onclick="showImg('https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800')">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600"
+                            alt="Food 5">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item shadow-sm" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        onclick="showImg('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800')">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600"
+                            alt="Food 6">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item shadow-sm" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        onclick="showImg('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800')">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600"
+                            alt="Food 7">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item shadow-sm" data-bs-toggle="modal" data-bs-target="#imgModal"
+                        onclick="showImg('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800')">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600"
+                            alt="Food 8">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imgModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="modal-body p-0 position-relative">
+                    <img id="modalImg" src="" class="img-fluid rounded-4 w-100" alt="Large View">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="https://wa.me/9998003879" class="float-btn float-whatsapp" target="_blank" title="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:9998003879" class="float-btn float-call" title="Call Us">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showImg(src) {
+            document.getElementById('modalImg').src = src;
+        }
+    </script>
+</body>
+
+</html>
