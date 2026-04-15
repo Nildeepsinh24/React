@@ -23,29 +23,29 @@ export default function NavbarApp() {
               >
                 J
               </span>
-              <span className="fw-bold fs-4 text-dark">Jadeja Dining Hall</span>
+              <span className="fw-bold fs-4 text-dark">Jadeja Restaurant</span>
             </div>
           </Link>
           {/* Desktop Navigation */}
           <div className="collapse navbar-collapse d-none d-lg-block mx-4">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold text-uppercase small">
               <li className="nav-item">
-                <NavLink className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`} to="/">
+                <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} to="/">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`} to="/products">
+                <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} to="/products">
                   Products
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`} to="/gallery">
+                <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} to="/gallery">
                   Gallery
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`} to="/feedback">
+                <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} to="/feedback">
                   Feedback
                 </NavLink>
               </li>
@@ -86,38 +86,38 @@ export default function NavbarApp() {
           <div className="list-group list-group-flush sidebar">
             <NavLink
               to="/"
-              className={({isActive}) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
+              className={({ isActive }) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
             >
               <i className="fas fa-home me-3" /> Home
             </NavLink>
             <NavLink
               to="/products"
-              className={({isActive}) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
+              className={({ isActive }) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
             >
               <i className="fas fa-utensils me-3" /> Products
             </NavLink>
             <NavLink
               to="/gallery"
-              className={({isActive}) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
+              className={({ isActive }) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
             >
               <i className="fas fa-images me-3" /> Gallery
             </NavLink>
             <NavLink
               to="/cart"
-              className={({isActive}) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
+              className={({ isActive }) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
             >
               <i className="fas fa-shopping-cart me-3" /> Cart
             </NavLink>
             <hr />
             <NavLink
               to="/checkout"
-              className={({isActive}) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
+              className={({ isActive }) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
             >
               <i className="fas fa-credit-card me-3" /> Checkout
             </NavLink>
             <NavLink
               to="/feedback"
-              className={({isActive}) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
+              className={({ isActive }) => `list-group-item list-group-item-action border-0 ${isActive ? 'active' : ''}`}
             >
               <i className="fas fa-comment-alt me-3" /> Feedback
             </NavLink>
