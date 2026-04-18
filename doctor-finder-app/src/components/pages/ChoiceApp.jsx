@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ChoiseApp() {
+export default function ChoiceApp() {
   return (
    <section className="py-24 bg-surface px-8">
   <div className="max-w-7xl mx-auto">

@@ -26,7 +26,7 @@ export default function DoctorProfileApp() {
     <div className="min-h-screen bg-surface flex flex-col">
       <HeaderApp />
       
-      <main className="grow pt-32 pb-20 px-6 max-w-7xl mx-auto w-full">
+      <main className="flex-grow pt-32 pb-20 px-6 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left: Doctor Card & Stats */}
           <div className="lg:col-span-4 space-y-6">

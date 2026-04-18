@@ -5,7 +5,7 @@ import FooterApp from '../common/FooterApp'
 const PolicyContent = ({ title, date, sections }) => (
   <div className="min-h-screen bg-surface flex flex-col">
     <HeaderApp />
-    <main className="flex-grow pt-32 pb-20 px-6 max-w-4xl mx-auto w-full">
+    <main className="grow pt-32 pb-20 px-6 max-w-4xl mx-auto w-full">
       <div className="mb-12">
         <p className="text-secondary font-bold tracking-widest text-xs uppercase mb-2">Legal Information</p>
         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-2 font-headline">{title}</h1>

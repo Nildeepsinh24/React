@@ -118,7 +118,7 @@ export default function DoctorListApp() {
     <div className="min-h-screen bg-surface flex flex-col">
       <HeaderApp />
       
-      <main className="flex-grow pt-28 pb-20 px-6 max-w-7xl mx-auto w-full">
+      <main className="grow pt-28 pb-20 px-6 max-w-7xl mx-auto w-full">
         <div className="flex flex-col lg:flex-row gap-8">
           
           {/* Desktop Sidebar Filter */}
@@ -136,7 +136,7 @@ export default function DoctorListApp() {
           </button>
 
           {/* Main Specialist Grid */}
-          <div className="flex-grow space-y-8">
+          <div className="grow space-y-8">
             <div className="flex justify-between items-end">
               <div>
                 <h1 className="text-3xl font-bold text-on-surface font-headline">Expert Specialists</h1>
@@ -159,7 +159,7 @@ export default function DoctorListApp() {
                         Verified
                       </div>
                     </div>
-                    <div className="flex-grow space-y-3">
+                    <div className="grow space-y-3">
                       <div>
                         <h3 className="text-xl font-bold text-primary">{doctor.name}</h3>
                         <p className="text-xs font-bold uppercase tracking-widest text-secondary">{doctor.specialty}</p>

@@ -133,7 +133,7 @@ const AdminDashboard = () => {
                 strokeWidth="8"
               />
               <circle
-                className="text-primary"
+                className="text-primary drop-shadow-[0_0_8px_rgba(var(--primary),0.3)] transition-all duration-1000"
                 cx="96" cy="96" r="82"
                 fill="none"
                 stroke="currentColor"
@@ -141,7 +141,6 @@ const AdminDashboard = () => {
                 strokeDasharray="515.22"
                 strokeDashoffset={515.22 * (1 - 0.82)}
                 strokeLinecap="round"
-                className="drop-shadow-[0_0_8px_rgba(var(--primary),0.3)] transition-all duration-1000"
               />
             </svg>
             <div className="text-center relative z-10">
