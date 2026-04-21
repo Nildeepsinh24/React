@@ -428,8 +428,13 @@
             }
 
             .dot-nav {
-                right: 0.45rem !important;
-                gap: 0.85rem !important;
+                right: 0.6rem !important;
+                gap: 0.75rem !important;
+            }
+
+            .dot-nav button {
+                gap: 0.4rem !important;
+                justify-content: flex-end;
             }
 
             .nav-dot {
@@ -438,11 +443,29 @@
             }
 
             .nav-dot.active {
-                width: 1.25rem;
+                width: 1.1rem;
             }
 
             .dot-nav span:not(.nav-dot) {
                 display: none;
+            }
+
+            .dot-nav .nav-dot.active + span {
+                display: block;
+                opacity: 0 !important;
+                font-size: 0.58rem;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: var(--accent);
+                font-weight: 600;
+                transition: opacity 0.5s ease, transform 0.5s ease;
+                transform: translateX(10px);
+                pointer-events: none;
+            }
+
+            .dot-nav.is-scrolling .nav-dot.active + span {
+                opacity: 0.9 !important;
+                transform: translateX(0);
             }
 
             .mobile-tip {
@@ -780,7 +803,9 @@
         const emailButton = document.getElementById("copy-email");
         const emailFeedback = document.getElementById("email-feedback");
         const email = "neeldeepsinhjadeja24@gmail.com";
+        const dotNav = document.querySelector(".dot-nav");
         const sectionNames = ["Home", "About", "Projects", "Skills", "Contact"];
+        let scrollTimeout;
         const heroTypedText = "Full-Stack Developer | Building Scalable Web Apps";
         const consoleMessages = [
             "$ building scalable APIs...",
@@ -906,6 +931,16 @@
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
             const percentage = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
             scrollProgress.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
+            
+            // Show side nav labels while scrolling
+            if (dotNav) {
+                dotNav.classList.add("is-scrolling");
+                window.clearTimeout(scrollTimeout);
+                scrollTimeout = window.setTimeout(() => {
+                    dotNav.classList.remove("is-scrolling");
+                }, 1800);
+            }
+
             floatingOrbs.forEach((orb, index) => {
                 const speed = index === 0 ? 0.06 : 0.09;
                 const offset = (window.scrollY * speed) % 32;
