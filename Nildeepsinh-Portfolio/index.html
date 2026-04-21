@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nildeepsinh Jadeja | Full Stack Developer</title>
-    <meta name="description" content="Attractive full stack developer portfolio of Nildeepsinh Jadeja with animated scroll sections, projects, skills, and contact details.">
+    <meta name="description"
+        content="Attractive full stack developer portfolio of Nildeepsinh Jadeja with animated scroll sections, projects, skills, and contact details.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-main: #050816;
@@ -106,9 +110,17 @@
             border-radius: 9999px;
         }
 
-        .dev-dot.red { background: #fb7185; }
-        .dev-dot.yellow { background: #fbbf24; }
-        .dev-dot.green { background: #34d399; }
+        .dev-dot.red {
+            background: #fb7185;
+        }
+
+        .dev-dot.yellow {
+            background: #fbbf24;
+        }
+
+        .dev-dot.green {
+            background: #34d399;
+        }
 
         .dev-console-title {
             font-size: 0.65rem;
@@ -246,11 +258,25 @@
             filter: blur(0);
         }
 
-        .delay-1 { transition-delay: 0.08s; }
-        .delay-2 { transition-delay: 0.16s; }
-        .delay-3 { transition-delay: 0.24s; }
-        .delay-4 { transition-delay: 0.32s; }
-        .delay-5 { transition-delay: 0.4s; }
+        .delay-1 {
+            transition-delay: 0.08s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.16s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.24s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.32s;
+        }
+
+        .delay-5 {
+            transition-delay: 0.4s;
+        }
 
         .floating {
             position: absolute;
@@ -341,13 +367,13 @@
 
         .timeline {
             position: relative;
-            padding-left: 1.25rem;
+            padding-left: 1.5rem;
         }
 
         .timeline::before {
             content: "";
             position: absolute;
-            left: 0.18rem;
+            left: 0.46rem;
             top: 0.4rem;
             bottom: 0.4rem;
             width: 2px;
@@ -366,10 +392,10 @@
         .timeline-item::before {
             content: "";
             position: absolute;
-            left: -1.22rem;
+            left: -1.34rem;
             top: 1.05rem;
-            width: 0.62rem;
-            height: 0.62rem;
+            width: 0.6rem;
+            height: 0.6rem;
             border-radius: 9999px;
             background: linear-gradient(45deg, var(--accent), var(--accent-2));
             box-shadow: 0 0 0 0 rgba(93, 226, 255, 0.4);
@@ -377,36 +403,89 @@
         }
 
         @keyframes scanLine {
-            0% { transform: translateY(0); opacity: 0; }
-            10% { opacity: 1; }
-            80% { opacity: 0.65; }
-            100% { transform: translateY(120px); opacity: 0; }
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0.65;
+            }
+
+            100% {
+                transform: translateY(120px);
+                opacity: 0;
+            }
         }
 
         @keyframes floatBlob {
-            0%, 100% { transform: translateY(0) translateX(0) scale(1); }
-            50% { transform: translateY(-22px) translateX(10px) scale(1.08); }
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-22px) translateX(10px) scale(1.08);
+            }
         }
 
         @keyframes pingSoft {
-            0% { box-shadow: 0 0 0 0 rgba(93, 226, 255, 0.4); }
-            70% { box-shadow: 0 0 0 11px rgba(93, 226, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(93, 226, 255, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(93, 226, 255, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 11px rgba(93, 226, 255, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(93, 226, 255, 0);
+            }
         }
 
         @keyframes pulseSoft {
-            0%, 100% { transform: translateY(0); border-color: rgba(148, 163, 184, 0.35); }
-            50% { transform: translateY(-2px); border-color: rgba(93, 226, 255, 0.5); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+                border-color: rgba(148, 163, 184, 0.35);
+            }
+
+            50% {
+                transform: translateY(-2px);
+                border-color: rgba(93, 226, 255, 0.5);
+            }
         }
 
         @keyframes blinkCaret {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
 
         @keyframes rippleAnim {
-            from { width: 0; height: 0; opacity: 0.55; }
-            to { width: 280px; height: 280px; opacity: 0; }
+            from {
+                width: 0;
+                height: 0;
+                opacity: 0.55;
+            }
+
+            to {
+                width: 280px;
+                height: 280px;
+                opacity: 0;
+            }
         }
 
         @media (max-width: 1024px) {
@@ -431,13 +510,15 @@
                 right: 0.7rem !important;
                 display: flex !important;
                 flex-direction: column !important;
-                align-items: flex-end !important; /* Key for vertical alignment */
+                align-items: flex-end !important;
+                /* Key for vertical alignment */
                 gap: 1.1rem !important;
             }
 
             .dot-nav button {
                 display: flex;
-                flex-direction: row-reverse; /* Dot on right, text on left */
+                flex-direction: row-reverse;
+                /* Dot on right, text on left */
                 align-items: center;
                 gap: 0.6rem;
                 outline: none;
@@ -467,13 +548,14 @@
                 color: var(--accent);
                 font-weight: 700;
                 transition: opacity 0.4s ease, transform 0.4s ease;
-                transform: translateX(-12px); /* Animate from left */
+                transform: translateX(-12px);
+                /* Animate from left */
                 pointer-events: none;
                 white-space: nowrap;
             }
 
             /* Show active label while scrolling */
-            .dot-nav.is-scrolling .nav-dot.active + span {
+            .dot-nav.is-scrolling .nav-dot.active+span {
                 opacity: 1;
                 transform: translateX(0);
             }
@@ -484,14 +566,17 @@
                     right: 1.75rem !important;
                     gap: 1.25rem !important;
                 }
+
                 .dot-nav button:hover span:not(.nav-dot) {
                     opacity: 1 !important;
                     transform: translateX(0) !important;
                 }
+
                 .nav-dot {
                     width: 0.65rem;
                     height: 0.65rem;
                 }
+
                 .nav-dot.active {
                     width: 1.8rem;
                 }
@@ -521,6 +606,7 @@
         }
     </style>
 </head>
+
 <body class="selection:bg-cyan-200 selection:text-slate-900">
     <canvas id="particles"></canvas>
     <div class="grain"></div>
@@ -538,15 +624,19 @@
         </div>
     </div>
 
-    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-5 backdrop-blur bg-[#050816b8] border-b border-white/10">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-5 backdrop-blur bg-[#050816b8] border-b border-white/10">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <button class="headline shimmer text-xl sm:text-2xl font-bold ripple-btn" onclick="goToSection(0)">NILDEEPSINH JADEJA</button>
+            <button class="headline shimmer text-xl sm:text-2xl font-bold ripple-btn"
+                onclick="goToSection(0)">NILDEEPSINH JADEJA</button>
             <nav class="desktop-nav hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
                 <button onclick="goToSection(0)" class="hover:text-cyan-200 transition ripple-btn">Home</button>
                 <button onclick="goToSection(1)" class="hover:text-cyan-200 transition ripple-btn">About</button>
                 <button onclick="goToSection(2)" class="hover:text-cyan-200 transition ripple-btn">Projects</button>
                 <button onclick="goToSection(3)" class="hover:text-cyan-200 transition ripple-btn">Skills</button>
-                <button onclick="goToSection(4)" class="px-5 py-2 rounded-full bg-cyan-300 text-slate-950 font-semibold hover:scale-105 transition ripple-btn">Hire Me</button>
+                <button onclick="goToSection(4)"
+                    class="px-5 py-2 rounded-full bg-cyan-300 text-slate-950 font-semibold hover:scale-105 transition ripple-btn">Hire
+                    Me</button>
             </nav>
         </div>
     </header>
@@ -574,7 +664,8 @@
             <div class="floating bg-cyan-400 top-6 left-6"></div>
             <div class="floating bg-emerald-300 bottom-8 right-14"></div>
             <div class="max-w-6xl mx-auto text-center">
-                <h1 class="reveal delay-2 headline text-5xl sm:text-7xl lg:text-[6.2rem] leading-[0.9] mt-4 font-bold shimmer">
+                <h1
+                    class="reveal delay-2 headline text-5xl sm:text-7xl lg:text-[6.2rem] leading-[0.9] mt-4 font-bold shimmer">
                     Nildeepsinh Jadeja
                 </h1>
                 <h2 class="reveal delay-3 headline text-2xl sm:text-4xl mt-5 font-semibold text-cyan-100">
@@ -584,7 +675,8 @@
                     <span id="typed-role"></span><span class="typed-caret">|</span>
                 </p>
                 <p class="reveal delay-3 text-slate-300 max-w-2xl mx-auto mt-6 text-base sm:text-lg">
-                    I am a <strong>Full-Stack Developer</strong> building performance-focused web experiences with clean architecture and user-first interfaces.
+                    I am a <strong>Full-Stack Developer</strong> building performance-focused web experiences with clean
+                    architecture and user-first interfaces.
                 </p>
                 <div class="reveal delay-4 mt-6 flex flex-wrap justify-center gap-3">
                     <span class="micro-badge">Full-Stack Developer</span>
@@ -592,80 +684,241 @@
                     <span class="micro-badge">Performance Focused</span>
                 </div>
                 <div class="reveal delay-4 mt-10 flex flex-wrap justify-center gap-4">
-                    <button onclick="goToSection(2)" class="px-7 py-3 rounded-full bg-cyan-300 text-slate-950 font-semibold hover:scale-105 transition ripple-btn">View Projects</button>
-                    <a href="./Nildeepsinh-Jadeja-Resume.pdf" download class="px-7 py-3 rounded-full border border-cyan-200/40 hover:border-cyan-200 text-cyan-100 hover:text-white transition ripple-btn">Download Resume PDF</a>
-                    <a href="https://www.linkedin.com/in/nildeepsinh-jadeja-421b2a35b/" target="_blank" rel="noopener noreferrer" class="px-7 py-3 rounded-full border border-cyan-200/40 hover:border-cyan-200 text-cyan-100 hover:text-white transition ripple-btn">LinkedIn Profile</a>
-                    <a href="https://github.com/Nildeepsinh24" target="_blank" rel="noopener noreferrer" class="px-7 py-3 rounded-full border border-cyan-200/40 hover:border-cyan-200 text-cyan-100 hover:text-white transition ripple-btn">GitHub Profile</a>
+                    <button onclick="goToSection(2)"
+                        class="px-7 py-3 rounded-full bg-cyan-300 text-slate-950 font-semibold hover:scale-105 transition ripple-btn">View
+                        Projects</button>
+                    <a href="./Nildeepsinh-Jadeja-Resume.pdf" download
+                        class="px-7 py-3 rounded-full border border-cyan-200/40 hover:border-cyan-200 text-cyan-100 hover:text-white transition ripple-btn">Download
+                        Resume PDF</a>
+                    <a href="https://www.linkedin.com/in/nildeepsinh-jadeja-421b2a35b/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="px-7 py-3 rounded-full border border-cyan-200/40 hover:border-cyan-200 text-cyan-100 hover:text-white transition ripple-btn">LinkedIn
+                        Profile</a>
+                    <a href="https://github.com/Nildeepsinh24" target="_blank" rel="noopener noreferrer"
+                        class="px-7 py-3 rounded-full border border-cyan-200/40 hover:border-cyan-200 text-cyan-100 hover:text-white transition ripple-btn">GitHub
+                        Profile</a>
                 </div>
                 <p class="reveal delay-5 mt-6 text-sm sm:text-base text-cyan-200 font-medium">
                     Available for Internship, Full-Time and Entry-Level Full-Stack Developer roles
                 </p>
-                <p class="mobile-tip reveal delay-5 mt-8 text-sm text-slate-400">Scroll down to explore all sections.</p>
+                <p class="mobile-tip reveal delay-5 mt-8 text-sm text-slate-400">Scroll down to explore all sections.
+                </p>
             </div>
         </section>
 
         <section id="section-1">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-                <div class="glass spotlight-card rounded-3xl p-8 sm:p-10 reveal delay-1">
-                    <p class="uppercase tracking-[0.3em] text-xs text-cyan-200">About Me</p>
-                    <h2 class="headline text-4xl sm:text-5xl mt-4 font-bold">Developer with a product mindset.</h2>
-                    <div class="mt-6 space-y-3 text-slate-300">
-                        <div class="rounded-2xl bg-slate-900/50 border border-white/10 p-4">
-                            BCA graduate with an 8.94 CGPA, having hands-on experience in Full-Stack Web Development and Android application development.
+                <div class="glass spotlight-card rounded-3xl p-8 sm:p-10 reveal delay-1 flex flex-col h-full">
+                    <div class="mb-8">
+                        <p class="uppercase tracking-[0.3em] text-xs text-cyan-200">The Story</p>
+                        <h2 class="headline text-4xl sm:text-5xl mt-4 font-bold">Developer with a <span
+                                class="shimmer">Product Mindset.</span></h2>
+                        <p class="mt-6 text-slate-300 leading-relaxed">
+                            Passionate about solving real-world problems through code and continuously improving
+                            technical skills by building practical applications.
+                        </p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div
+                            class="rounded-2xl bg-slate-950/40 border border-white/5 p-5 hover:border-cyan-200/20 transition-all hover:bg-slate-900/40 group sm:col-span-2">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="p-2 rounded-lg bg-cyan-300/10 text-cyan-300 group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs uppercase tracking-wider text-cyan-200/80 font-bold">Education &
+                                    Foundation</span>
+                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                BCA graduate with an <strong>8.94 CGPA</strong>, having hands-on experience in
+                                Full-Stack Web Development and Android application development.
+                            </p>
                         </div>
-                        <div class="rounded-2xl bg-slate-900/50 border border-white/10 p-4">
-                            Developed and deployed real-world projects including rajkit.com, a full-stack e-commerce platform for groceries and daily essentials and an Android learning application SQL Masterclass in Google Play Store, focusing on performance, scalability, and user experience.
+
+                        <div
+                            class="rounded-2xl bg-slate-950/40 border border-white/5 p-5 hover:border-cyan-200/20 transition-all hover:bg-slate-900/40 group sm:col-span-2">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="p-2 rounded-lg bg-emerald-300/10 text-emerald-300 group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                        <polyline points="9 22 9 12 15 12 15 22" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs uppercase tracking-wider text-emerald-200/80 font-bold">Real-World
+                                    Projects</span>
+                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Developed and deployed real-world projects including <strong>rajkit.com</strong>, a
+                                full-stack e-commerce platform for groceries and daily essentials and an Android
+                                learning application <strong>SQL Masterclass</strong> in Google Play Store, focusing on
+                                performance, scalability, and user experience.
+                            </p>
                         </div>
-                        <div class="rounded-2xl bg-slate-900/50 border border-white/10 p-4">
-                            Skilled in building full-stack web applications using Python, Django, React, HTML5, Flask, CSS3, and JavaScript, with additional experience in PHP and Laravel (MVC architecture).
+                        <!-- Backend & Growth Card -->
+                        <div
+                            class="rounded-2xl bg-slate-950/40 border border-white/5 p-5 hover:border-cyan-200/20 transition-all hover:bg-slate-900/40 group">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="p-2 rounded-lg bg-violet-300/10 text-violet-300 group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                        <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                                        <path d="M3 12A9 3 0 0 0 21 12" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs uppercase tracking-wider text-violet-200/80 font-bold">Backend &
+                                    Growth</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Strong understanding of backend concepts including <strong>authentication, REST APIs,
+                                    CRUD, and database design</strong>. Currently expanding into <strong>Node.js and
+                                    MongoDB</strong>.
+                            </p>
                         </div>
-                        <div class="rounded-2xl bg-slate-900/50 border border-white/10 p-4">
-                            Strong understanding of backend development concepts including authentication systems, REST APIs, CRUD operations, database design and responsive UI/UX. Currently expanding my expertise in Node.js and MongoDB to strengthen my understanding of modern full-stack development.
+
+                        <!-- Tech Stack Card -->
+                        <div
+                            class="rounded-2xl bg-slate-950/40 border border-white/5 p-5 hover:border-cyan-200/20 transition-all hover:bg-slate-900/40 group">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="p-2 rounded-lg bg-amber-300/10 text-amber-300 group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs uppercase tracking-wider text-amber-200/80 font-bold">Tech
+                                    Stack</span>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Skilled in <strong>Python, Django, React, Flask, and JavaScript</strong>, with
+                                experience in <strong>PHP and Laravel (MVC architecture)</strong> for full-stack depth.
+                            </p>
                         </div>
-                        <div class="rounded-2xl bg-slate-900/50 border border-white/10 p-4">
-                            Passionate about solving real-world problems through code and continuously improving technical skills by building practical applications. Currently seeking entry-level opportunities as a Full Stack Developer to contribute, learn, and grow in a professional environment.
+                    </div>
+
+                </div>
+                <div class="glass spotlight-card rounded-3xl p-8 sm:p-10 reveal delay-3 flex flex-col h-full">
+                    <h3 class="headline text-3xl font-bold">Highlights & <span class="text-slate-400">Timeline</span>
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="rounded-2xl bg-slate-950/40 border border-white/5 p-4 flex flex-col gap-2">
+                            <div class="text-cyan-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M4.5 16.5c-1.5 1.26-2.5 3-2.5 4.5h20c0-1.5-1-3.24-2.5-4.5" />
+                                    <path d="M12 3v13.5" />
+                                    <path d="M9 13l3 3 3-3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-[0.65rem] uppercase tracking-wider text-slate-500 font-bold">CGPA</p>
+                                <p class="text-cyan-100 font-bold">8.94 / 10</p>
+                            </div>
                         </div>
+                        <div class="rounded-2xl bg-slate-950/40 border border-white/5 p-4 flex flex-col gap-2">
+                            <div class="text-emerald-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-[0.65rem] uppercase tracking-wider text-slate-500 font-bold">Degree
+                                </p>
+                                <p class="text-emerald-100 font-bold">BCA Graduate</p>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl bg-slate-950/40 border border-white/5 p-4 flex flex-col gap-2">
+                            <div class="text-amber-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m18 16 4-4-4-4" />
+                                    <path d="m6 8-4 4 4 4" />
+                                    <path d="m14.5 4-5 16" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-[0.65rem] uppercase tracking-wider text-slate-500 font-bold">Current
+                                </p>
+                                <p class="text-amber-100 font-bold">React + Python/Django</p>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl bg-slate-950/40 border border-white/5 p-4 flex flex-col gap-2">
+                            <div class="text-violet-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-[0.65rem] uppercase tracking-wider text-slate-500 font-bold">Target
+                                </p>
+                                <p class="text-violet-100 font-bold">Node + MongoDB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline mt-10 space-y-6">
+                        <div class="timeline-item flex gap-4">
+                            <div class="flex-1">
+                                <p class="text-cyan-100 font-semibold leading-tight text-sm">Full Stack Training</p>
+                                <p class="text-[0.7rem] text-slate-500 mt-0.5">TOPS Technologies • Specialized Track
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item flex gap-4">
+                            <div class="flex-1">
+                                <p class="text-cyan-100 font-semibold leading-tight text-sm">rajkit.com Live</p>
+                                <p class="text-[0.7rem] text-slate-500 mt-0.5">Full Ecosystem Deployment •
+                                    E-Commerce</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item flex gap-4">
+                            <div class="flex-1">
+                                <p class="text-cyan-100 font-semibold leading-tight text-sm">Play Store Release</p>
+                                <p class="text-[0.7rem] text-slate-500 mt-0.5">SQL Masterclass • Edu-Tech Android App
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-white/5">
+                        <p class="text-sm text-cyan-100/90 font-medium flex items-center gap-3">
+                            <span class="flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-cyan-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                            </span>
+                            Currently seeking entry-level opportunities as a Full Stack Developer to contribute,
+                            learn,
+                            and grow in a professional environment.
+                        </p>
                     </div>
                 </div>
-                <div class="glass spotlight-card rounded-3xl p-8 sm:p-10 reveal delay-3">
-                    <h3 class="headline text-3xl font-bold">Highlights & Timeline</h3>
-                    <div class="grid grid-cols-2 gap-4 mt-6">
-                        <div class="rounded-2xl bg-slate-900/60 border border-white/10 p-4">
-                            <p class="text-xs uppercase text-slate-400">CGPA</p>
-                            <p class="text-cyan-200 font-semibold mt-1">8.94</p>
-                        </div>
-                        <div class="rounded-2xl bg-slate-900/60 border border-white/10 p-4">
-                            <p class="text-xs uppercase text-slate-400">Degree</p>
-                            <p class="text-cyan-200 font-semibold mt-1">BCA</p>
-                        </div>
-                        <div class="rounded-2xl bg-slate-900/60 border border-white/10 p-4">
-                            <p class="text-xs uppercase text-slate-400">Core Stack</p>
-                            <p class="text-cyan-200 font-semibold mt-1">Python + React</p>
-                        </div>
-                        <div class="rounded-2xl bg-slate-900/60 border border-white/10 p-4">
-                            <p class="text-xs uppercase text-slate-400">Next Focus</p>
-                            <p class="text-cyan-200 font-semibold mt-1">Node.js + MongoDB</p>
-                        </div>
-                    </div>
-                    <div class="timeline mt-8">
-                        <div class="timeline-item">
-                            <p class="text-cyan-100 font-medium">Full Stack Development Training</p>
-                            <p class="text-sm text-slate-400">TOPS Technologies - Ongoing</p>
-                        </div>
-                        <div class="timeline-item">
-                            <p class="text-cyan-100 font-medium">rajkit.com E-Commerce Platform</p>
-                            <p class="text-sm text-slate-400">Deployed full-stack grocery and essentials platform</p>
-                        </div>
-                        <div class="timeline-item">
-                            <p class="text-cyan-100 font-medium">SQL Masterclass Android App</p>
-                            <p class="text-sm text-slate-400">Published learning app focused on SQL concepts</p>
-                        </div>
-                        <div class="timeline-item">
-                            <p class="text-cyan-100 font-medium">Entry-Level Full Stack Opportunities</p>
-                            <p class="text-sm text-slate-400">Open to contribute, learn, and grow professionally</p>
-                        </div>
-                    </div>
-                </div>
+            </div>
             </div>
         </section>
 
@@ -673,34 +926,46 @@
             <div class="max-w-7xl mx-auto w-full">
                 <div class="reveal delay-1 mb-8">
                     <p class="uppercase tracking-[0.3em] text-xs text-cyan-200">Featured Work</p>
-                    <h2 class="headline text-4xl sm:text-6xl font-bold mt-3">Projects that reflect full stack depth.</h2>
+                    <h2 class="headline text-4xl sm:text-6xl font-bold mt-3">Projects that reflect full stack depth.
+                    </h2>
                 </div>
                 <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
                     <article class="reveal delay-2 glass spotlight-card rounded-3xl overflow-hidden">
-                        <img src="./assets/rajkit-brand-banner.png" alt="Rajkit E-Commerce" class="h-44 w-full object-cover">
+                        <img src="./assets/rajkit-brand-banner.png" alt="Rajkit E-Commerce"
+                            class="h-44 w-full object-cover">
                         <div class="p-6">
                             <h3 class="headline text-2xl font-bold">Rajkit E-Commerce</h3>
-                            <p class="text-slate-300 mt-3">Grocery-focused platform with secure login, dynamic cart updates, and responsive checkout flow.</p>
-                            <p class="text-slate-300 mt-3 text-sm">Project deployment metrics: 18 users, 21 orders, and 49 listed products.</p>
+                            <p class="text-slate-300 mt-3">Grocery-focused platform with secure login, dynamic cart
+                                updates, and responsive checkout flow.</p>
+                            <p class="text-slate-300 mt-3 text-sm">Project live web hosted metrics: 18 users, 21 orders,
+                                and 49 listed products.</p>
                             <div class="flex gap-2 mt-3">
                                 <span class="micro-badge">Auth</span>
                                 <span class="micro-badge">Cart</span>
                                 <span class="micro-badge">CRUD</span>
                             </div>
-                            <p class="text-xs text-cyan-200 mt-4 uppercase tracking-[0.2em]">PHP / MySQL / JavaScript</p>
-                            <p class="text-xs text-cyan-200 mt-3 uppercase tracking-[0.2em]">Status: Project Deployment (Portfolio)</p>
-                            <p class="text-xs text-cyan-200 mt-2 uppercase tracking-[0.2em]">Source: Private / Not Public</p>
+                            <p class="text-xs text-cyan-200 mt-4 uppercase tracking-[0.2em]">PHP / MySQL / JavaScript
+                            </p>
+                            <p class="text-xs text-cyan-200 mt-3 uppercase tracking-[0.2em]">Status: Project Deployment
+                                (Portfolio)</p>
+                            <p class="text-xs text-cyan-200 mt-2 uppercase tracking-[0.2em]">Source: Private / Not
+                                Public</p>
                             <div class="mt-5 flex gap-3">
-                                <a href="https://rajkit.com/" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Live Demo</a>
+                                <a href="https://rajkit.com/" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Live
+                                    Demo</a>
                             </div>
                         </div>
                     </article>
                     <article class="reveal delay-3 glass spotlight-card rounded-3xl overflow-hidden">
-                        <img src="./assets/sql-masterclass-banner.png" alt="SQL Masterclass" class="h-44 w-full object-cover">
+                        <img src="./assets/sql-masterclass-banner.png" alt="SQL Masterclass"
+                            class="h-44 w-full object-cover">
                         <div class="p-6">
                             <h3 class="headline text-2xl font-bold">SQL Masterclass App</h3>
-                            <p class="text-slate-300 mt-3">Android-based quiz app for SQL learning, built with interactive modules and quick progress checks.</p>
-                            <p class="text-slate-300 mt-3 text-sm">Published on Google Play with 50+ downloads and structured learning flow.</p>
+                            <p class="text-slate-300 mt-3">Android-based quiz app for SQL learning, built with
+                                interactive modules and quick progress checks.</p>
+                            <p class="text-slate-300 mt-3 text-sm">Published on Google Play with 50+ downloads and
+                                structured learning flow.</p>
                             <div class="flex gap-2 mt-3">
                                 <span class="micro-badge">Quiz</span>
                                 <span class="micro-badge">Android</span>
@@ -708,17 +973,25 @@
                             </div>
                             <p class="text-xs text-cyan-200 mt-4 uppercase tracking-[0.2em]">Java / XML / SQLite</p>
                             <div class="mt-5 flex gap-3">
-                                <a href="https://github.com/Nildeepsinh24/SQL_Android_App" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Source</a>
-                                <a href="https://play.google.com/store/apps/details?id=com.project_vn.sql_masterclass" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Live / Demo</a>
+                                <a href="https://github.com/Nildeepsinh24/SQL_Android_App" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Source</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.project_vn.sql_masterclass"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Live
+                                    / Demo</a>
                             </div>
                         </div>
                     </article>
                     <article class="reveal delay-4 glass spotlight-card rounded-3xl overflow-hidden">
-                        <img src="./assets/medkit/unified-role-selection.png" alt="Medkit Healthcare" class="h-44 w-full object-cover">
+                        <img src="./assets/medkit/unified-role-selection.png" alt="Medkit Healthcare"
+                            class="h-44 w-full object-cover">
                         <div class="p-6">
                             <h3 class="headline text-2xl font-bold">Medkit Healthcare</h3>
-                            <p class="text-slate-300 mt-3">Appointment and patient-flow system with role-driven dashboards and booking management.</p>
-                            <p class="text-slate-300 mt-3 text-sm">Built with multi-role modules (Patient + Doctor), authentication, booking, and profile management screens.</p>
+                            <p class="text-slate-300 mt-3">Appointment and patient-flow system with role-driven
+                                dashboards and booking management.</p>
+                            <p class="text-slate-300 mt-3 text-sm">Built with multi-role modules (Patient + Doctor),
+                                authentication, booking, and profile management screens.</p>
                             <div class="flex gap-2 mt-3">
                                 <span class="micro-badge">Booking</span>
                                 <span class="micro-badge">Dashboard</span>
@@ -727,8 +1000,14 @@
                             <p class="text-xs text-cyan-200 mt-4 uppercase tracking-[0.2em]">PHP / MySQL / Bootstrap</p>
                             <p class="text-xs text-cyan-200 mt-3 uppercase tracking-[0.2em]">Status: In Development</p>
                             <div class="mt-5 flex gap-3">
-                                <a href="./assets/medkit/doctor-dashboard.jpeg" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Preview 1</a>
-                                <a href="./assets/medkit/patient-dashboard.jpeg" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Preview 2</a>
+                                <a href="./assets/medkit/doctor-dashboard.jpeg" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Preview
+                                    1</a>
+                                <a href="./assets/medkit/patient-dashboard.jpeg" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs px-3 py-2 rounded-full border border-white/20 hover:border-cyan-300 transition">Preview
+                                    2</a>
                             </div>
                         </div>
                     </article>
@@ -739,7 +1018,8 @@
         <section id="section-3">
             <div class="max-w-6xl mx-auto w-full text-center">
                 <p class="reveal delay-1 uppercase tracking-[0.35em] text-xs text-cyan-200">Tech Stack</p>
-                <h2 class="reveal delay-2 headline text-4xl sm:text-6xl font-bold mt-4">Skills I use to ship production-ready Websites and applictaions.</h2>
+                <h2 class="reveal delay-2 headline text-4xl sm:text-6xl font-bold mt-4">Skills I use to ship
+                    production-ready Websites and applictaions.</h2>
                 <div class="reveal delay-3 mt-10 grid lg:grid-cols-2 gap-5 text-left">
                     <div class="glass spotlight-card rounded-2xl p-6">
                         <p class="text-xs uppercase tracking-[0.2em] text-cyan-200 mb-4">Core Full-Stack</p>
@@ -788,7 +1068,8 @@
                     </div>
 
                     <div class="glass spotlight-card rounded-2xl p-6">
-                        <p class="text-xs uppercase tracking-[0.2em] text-cyan-200 mb-4">Tools, Platform & Additional</p>
+                        <p class="text-xs uppercase tracking-[0.2em] text-cyan-200 mb-4">Tools, Platform & Additional
+                        </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="micro-badge">Git</span>
                             <span class="micro-badge">Cloud Computing</span>
@@ -812,15 +1093,25 @@
                     Ready to create
                     <span class="shimmer">something great?</span>
                 </h2>
-                <p class="reveal delay-3 mt-6 text-slate-300 text-lg">I am open to internships, freelance, and full-time opportunities in full stack development.</p>
+                <p class="reveal delay-3 mt-6 text-slate-300 text-lg">I am open to internships, freelance, and full-time
+                    opportunities in full stack development.</p>
                 <div class="reveal delay-4 mt-10 flex flex-wrap items-center justify-center gap-4">
-                    <button id="copy-email" class="px-8 py-3 rounded-full bg-cyan-300 text-slate-950 font-semibold hover:scale-105 transition ripple-btn">Copy Email</button>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neeldeepsinhjadeja24@gmail.com&su=Portfolio%20Opportunity&body=Hi%20Nildeepsinh%2C%0A%0AI%20saw%20your%20portfolio%20and%20wanted%20to%20connect." target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-full border border-white/20 hover:border-cyan-200 transition ripple-btn">Send Mail</a>
-                    <a href="https://www.linkedin.com/in/nildeepsinh-jadeja-421b2a35b/" target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-full border border-white/20 hover:border-cyan-200 transition ripple-btn">LinkedIn</a>
-                    <a href="https://github.com/Nildeepsinh24" target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-full border border-white/20 hover:border-cyan-200 transition ripple-btn">GitHub</a>
+                    <button id="copy-email"
+                        class="px-8 py-3 rounded-full bg-cyan-300 text-slate-950 font-semibold hover:scale-105 transition ripple-btn">Copy
+                        Email</button>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neeldeepsinhjadeja24@gmail.com&su=Portfolio%20Opportunity&body=Hi%20Nildeepsinh%2C%0A%0AI%20saw%20your%20portfolio%20and%20wanted%20to%20connect."
+                        target="_blank" rel="noopener noreferrer"
+                        class="px-8 py-3 rounded-full border border-white/20 hover:border-cyan-200 transition ripple-btn">Send
+                        Mail</a>
+                    <a href="https://www.linkedin.com/in/nildeepsinh-jadeja-421b2a35b/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="px-8 py-3 rounded-full border border-white/20 hover:border-cyan-200 transition ripple-btn">LinkedIn</a>
+                    <a href="https://github.com/Nildeepsinh24" target="_blank" rel="noopener noreferrer"
+                        class="px-8 py-3 rounded-full border border-white/20 hover:border-cyan-200 transition ripple-btn">GitHub</a>
                 </div>
                 <p id="email-feedback" class="reveal delay-5 mt-4 text-sm text-cyan-200"></p>
-                <footer class="mt-14 text-xs uppercase tracking-[0.28em] text-slate-500">© 2026 Nildeepsinh Jadeja. All rights reserved.</footer>
+                <footer class="mt-14 text-xs uppercase tracking-[0.28em] text-slate-500">© 2026 Nildeepsinh Jadeja. All
+                    rights reserved.</footer>
             </div>
         </section>
     </main>
@@ -967,7 +1258,7 @@
             const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
             const percentage = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
             scrollProgress.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
-            
+
             // Show side nav labels while scrolling
             if (dotNav) {
                 dotNav.classList.add("is-scrolling");
@@ -1004,4 +1295,5 @@
         });
     </script>
 </body>
+
 </html>
