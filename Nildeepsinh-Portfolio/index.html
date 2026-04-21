@@ -428,44 +428,73 @@
             }
 
             .dot-nav {
-                right: 0.6rem !important;
-                gap: 0.75rem !important;
+                right: 0.7rem !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-end !important; /* Key for vertical alignment */
+                gap: 1.1rem !important;
             }
 
             .dot-nav button {
-                gap: 0.4rem !important;
-                justify-content: flex-end;
+                display: flex;
+                flex-direction: row-reverse; /* Dot on right, text on left */
+                align-items: center;
+                gap: 0.6rem;
+                outline: none;
+                padding: 0.2rem 0;
             }
 
             .nav-dot {
                 width: 0.45rem;
                 height: 0.45rem;
+                flex-shrink: 0;
+                background: #2f3d5f;
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             }
 
             .nav-dot.active {
                 width: 1.1rem;
+                background: linear-gradient(90deg, var(--accent), var(--accent-2)) !important;
             }
 
-            .dot-nav span:not(.nav-dot) {
-                display: none;
-            }
-
-            .dot-nav .nav-dot.active + span {
+            /* Labels reveal to the LEFT of the anchored dots */
+            .dot-nav button span:not(.nav-dot) {
                 display: block;
-                opacity: 0 !important;
-                font-size: 0.58rem;
-                letter-spacing: 0.05em;
+                opacity: 0;
+                font-size: 0.6rem;
+                letter-spacing: 0.08em;
                 text-transform: uppercase;
                 color: var(--accent);
-                font-weight: 600;
-                transition: opacity 0.5s ease, transform 0.5s ease;
-                transform: translateX(10px);
+                font-weight: 700;
+                transition: opacity 0.4s ease, transform 0.4s ease;
+                transform: translateX(-12px); /* Animate from left */
                 pointer-events: none;
+                white-space: nowrap;
             }
 
+            /* Show active label while scrolling */
             .dot-nav.is-scrolling .nav-dot.active + span {
-                opacity: 0.9 !important;
+                opacity: 1;
                 transform: translateX(0);
+            }
+
+            /* Desktop hover adjustments */
+            @media (min-width: 1025px) {
+                .dot-nav {
+                    right: 1.75rem !important;
+                    gap: 1.25rem !important;
+                }
+                .dot-nav button:hover span:not(.nav-dot) {
+                    opacity: 1 !important;
+                    transform: translateX(0) !important;
+                }
+                .nav-dot {
+                    width: 0.65rem;
+                    height: 0.65rem;
+                }
+                .nav-dot.active {
+                    width: 1.8rem;
+                }
             }
 
             .mobile-tip {
@@ -481,6 +510,13 @@
                 right: 1rem;
                 bottom: 1rem;
                 max-width: none;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .dot-nav button:hover span:not(.nav-dot) {
+                opacity: 1;
+                transform: translateX(0);
             }
         }
     </style>
@@ -517,19 +553,19 @@
 
     <aside class="dot-nav fixed right-7 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-5">
         <button onclick="goToSection(0)" class="flex items-center gap-3 group">
-            <span class="nav-dot active"></span><span class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition">Home</span>
+            <span class="nav-dot active"></span><span class="text-xs text-slate-400 transition">Home</span>
         </button>
         <button onclick="goToSection(1)" class="flex items-center gap-3 group">
-            <span class="nav-dot"></span><span class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition">About</span>
+            <span class="nav-dot"></span><span class="text-xs text-slate-400 transition">About</span>
         </button>
         <button onclick="goToSection(2)" class="flex items-center gap-3 group">
-            <span class="nav-dot"></span><span class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition">Projects</span>
+            <span class="nav-dot"></span><span class="text-xs text-slate-400 transition">Projects</span>
         </button>
         <button onclick="goToSection(3)" class="flex items-center gap-3 group">
-            <span class="nav-dot"></span><span class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition">Skills</span>
+            <span class="nav-dot"></span><span class="text-xs text-slate-400 transition">Skills</span>
         </button>
         <button onclick="goToSection(4)" class="flex items-center gap-3 group">
-            <span class="nav-dot"></span><span class="text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition">Contact</span>
+            <span class="nav-dot"></span><span class="text-xs text-slate-400 transition">Contact</span>
         </button>
     </aside>
 
@@ -938,7 +974,7 @@
                 window.clearTimeout(scrollTimeout);
                 scrollTimeout = window.setTimeout(() => {
                     dotNav.classList.remove("is-scrolling");
-                }, 1800);
+                }, 1200); // Faster fade-out for better feel
             }
 
             floatingOrbs.forEach((orb, index) => {
