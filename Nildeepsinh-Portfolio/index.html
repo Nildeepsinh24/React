@@ -423,8 +423,25 @@
                 padding-bottom: 4.5rem;
             }
 
-            .desktop-nav,
+            .desktop-nav {
+                display: none;
+            }
+
             .dot-nav {
+                right: 0.45rem !important;
+                gap: 0.85rem !important;
+            }
+
+            .nav-dot {
+                width: 0.45rem;
+                height: 0.45rem;
+            }
+
+            .nav-dot.active {
+                width: 1.25rem;
+            }
+
+            .dot-nav span:not(.nav-dot) {
                 display: none;
             }
 
@@ -879,7 +896,7 @@
                 });
             },
             {
-                threshold: 0.55
+                threshold: 0.15
             }
         );
 
