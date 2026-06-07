@@ -1,0 +1,45 @@
+{
+  "tasks": [
+    {
+      "id": "task-1",
+      "title": "Design Premium Dashboard UI Layout",
+      "description": "Create a gorgeous, glassmorphic dark/light mode React dashboard using Tailwind CSS v4.",
+      "dueDate": "2026-05-25",
+      "priority": "high",
+      "status": "in_progress",
+      "category": "Work",
+      "createdAt": "2026-05-22T12:00:00.000Z"
+    },
+    {
+      "id": "task-2",
+      "title": "Integrate SweetAlert2 for Delete Confirmations",
+      "description": "Replace standard browser confirm dialogs with highly animated, sleek SweetAlert2 boxes.",
+      "dueDate": "2026-05-26",
+      "priority": "medium",
+      "status": "pending",
+      "category": "Urgent",
+      "createdAt": "2026-05-22T12:01:00.000Z"
+    },
+    {
+      "id": "task-3",
+      "title": "Build Responsive Navigation Header",
+      "description": "Ensure header has links for Adding Tasks, Managing Tasks, and updating lists dynamically with active count markers.",
+      "dueDate": "2026-05-23",
+      "priority": "high",
+      "status": "completed",
+      "category": "Study",
+      "createdAt": "2026-05-22T12:02:00.000Z"
+    },
+    {
+      "id": "task-4",
+      "title": "Organize Weekly Finances & Budget",
+      "description": "Review outstanding project expenses, calculate team milestones, and document next sprint allocations.",
+      "dueDate": "2026-05-30",
+      "priority": "low",
+      "status": "pending",
+      "category": "Finance",
+      "createdAt": "2026-05-22T12:03:00.000Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 min-h-screen antialiased;
+  }
+}
+
+/* Custom styling for Loader and extra utility helpers if needed */
+.w-180 {
+  width: 100%;
+  max-width: 45rem; /* ~720px */
+}
+
+.w-150 {
+  width: 100%;
+  max-width: 37.5rem; /* ~600px */
+}
