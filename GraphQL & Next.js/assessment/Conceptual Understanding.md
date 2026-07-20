@@ -1,0 +1,19 @@
+## Section A: Conceptual Understanding
+
+**1. Explain how JSX, component composition, and props work together to keep the UI reusable and consistent.**
+JSX allows developers to write HTML-like syntax directly inside JavaScript, clearly defining the visual structure of the UI. Component composition involves breaking this UI down into small, independent, and reusable blocks (e.g., a `<ProjectCard />` or `<Header />`). Props (properties) act as arguments passed into these components, allowing them to render dynamically based on the data they receive. Together, you build one consistent structural component and reuse it multiple times by simply passing different props, ensuring design consistency and eliminating code duplication.
+
+**2. Explain how state and event handling enable controlled updates without reloading the page.**
+State (using hooks like `useState`) acts as the memory of a React component, holding dynamic data such as form inputs or UI toggles. Event handlers (like `onChange` or `onClick`) capture user interactions immediately. When an event handler updates the state, React's Virtual DOM detects the change and efficiently re-renders *only* the specific component tied to that state, rather than refreshing the entire web page. This results in instant, live, and controlled updates.
+
+**3. Explain how conditional rendering and list rendering manage this behavior efficiently.**
+Conditional rendering uses logic (like `&&` or ternary operators `condition ? true : false`) to instruct React to mount or unmount sections of the UI (e.g., showing a "Projects" section only if `projects.length > 0`). List rendering uses the JavaScript `.map()` function to iterate over data arrays, dynamically generating a component for each item. This is highly efficient because React only creates elements based on the exact size of the dataset, and conditionally skips rendering entirely if the data doesn't exist, saving browser resources.
+
+**4. Explain how LocalStorage or API-based persistence integrates with component state.**
+Component state is temporary and clears upon a page refresh. To persist data, state hooks are combined with `useEffect`. When the component mounts, a `useEffect` hook reads the saved data from `localStorage` or fetches it from an API, using it to set the initial state. Whenever the state is modified (e.g., adding a new project), a subsequent function or `useEffect` simultaneously updates `localStorage` or sends a POST request to the API. This ensures the temporary state and the persistent storage are always synchronized.
+
+**5. As the app grows, explain how breaking the UI into smaller components improves maintainability and performance.**
+Maintainability is vastly improved because smaller components have a single responsibility; bugs are isolated to specific files, and multiple developers can work on different components simultaneously without causing merge conflicts. Performance improves because React tracks state at the component level. If a massive monolithic component changes one tiny state, the whole app re-renders. If broken into smaller components, only the specific micro-component containing that state will re-render, resulting in much faster update cycles.
+
+**6. Explain how this component-based architecture prepares the app for future scaling or migration to Next.js.**
+Next.js is fundamentally built on top of React components. A strict component-based architecture separates business logic from UI elements. When migrating to Next.js, these UI components can be seamlessly dragged and dropped into the new framework. The modularity allows developers to easily dictate which components should be rendered on the server (Server Components) and which require client-side interactivity (Client Components), perfectly aligning with Next.js's App Router architecture and enhancing SEO and load times.
